@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -e
+
+sudo apt install -y libqt5widgets5 \
+qtbase5-dev \
+libqt5concurrent5 \
+libyaml-cpp-dev
+
+# curl -s "https://raw.githubusercontent.com/arthurbeggs/scripts/master/install_apps/install_opencv2.sh" | bash
+
+mkdir build && cd build
+cmake ..
+make

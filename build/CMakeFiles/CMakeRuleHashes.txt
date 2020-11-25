@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+37b08e627d310c05af770aaa929633a8 CMakeFiles/traffic-editor_autogen
