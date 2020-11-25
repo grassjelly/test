@@ -30,9 +30,9 @@
 #include <QToolBar>
 
 #ifdef HAS_OPENCV
-#include <opencv2/core/core.hpp>
-#include <opencv2/videoio.hpp>
-#include <opencv2/imgproc.hpp>
+// #include <opencv2/core/core.hpp>
+// #include <opencv2/videoio.hpp>
+// #include <opencv2/imgproc.hpp>
 #endif
 
 #include <yaml-cpp/yaml.h>

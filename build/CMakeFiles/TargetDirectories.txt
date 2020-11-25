@@ -1,8 +1,0 @@
-/home/juan/traffic_editor/traffic_editor/build/CMakeFiles/install/strip.dir
-/home/juan/traffic_editor/traffic_editor/build/CMakeFiles/edit_cache.dir
-/home/juan/traffic_editor/traffic_editor/build/CMakeFiles/rebuild_cache.dir
-/home/juan/traffic_editor/traffic_editor/build/CMakeFiles/traffic-editor.dir
-/home/juan/traffic_editor/traffic_editor/build/CMakeFiles/list_install_components.dir
-/home/juan/traffic_editor/traffic_editor/build/CMakeFiles/install/local.dir
-/home/juan/traffic_editor/traffic_editor/build/CMakeFiles/install.dir
-/home/juan/traffic_editor/traffic_editor/build/CMakeFiles/traffic-editor_autogen.dir
