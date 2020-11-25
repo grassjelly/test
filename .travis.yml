@@ -1,0 +1,47 @@
+sudo: required
+language: generic
+
+matrix:
+  include:
+   - dist: xenial
+     env: ROSDISTRO=kinetic
+     os: linux
+     arch: amd64
+
+   - dist: xenial
+     env: ROSDISTRO=kinetic
+     os: linux
+     arch: arm64
+
+   - dist: bionic
+     env: ROSDISTRO=melodic
+     os: linux
+     arch: amd64
+
+   - dist: bionic
+     env: ROSDISTRO=melodic
+     os: linux
+     arch: arm64
+
+branches:
+  only:
+    - master
+
+compiler:
+  - gcc
+
+install:
+  - sudo apt update
+  - sudo apt install -y libqt5widgets5  
+  - sudo apt install -y qtbase5-dev
+  - sudo apt install -y libqt5concurrent5
+  - sudo apt install -y libyaml-cpp-dev
+  - curl -s "https://raw.githubusercontent.com/arthurbeggs/scripts/master/install_apps/install_opencv2.sh" | bash
+  - git clone https://grassjelly/test
+  - cd test
+  - mkdir build && cd build
+  - cmake ..
+
+notifications:
+  email:
+    - jimenojmm@gmail.com
