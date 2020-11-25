@@ -32,6 +32,7 @@ compiler:
 
 install:
   - sudo apt update
+  - sudo apt install -y qt5-default
   - sudo apt install -y libqt5widgets5  
   - sudo apt install -y qtbase5-dev
   - sudo apt install -y libqt5concurrent5
