@@ -36,7 +36,7 @@ install:
   - sudo apt install -y qtbase5-dev
   - sudo apt install -y libqt5concurrent5
   - sudo apt install -y libyaml-cpp-dev
-  - curl -s "https://raw.githubusercontent.com/arthurbeggs/scripts/master/install_apps/install_opencv2.sh" | bash
+  # - curl -s "https://raw.githubusercontent.com/arthurbeggs/scripts/master/install_apps/install_opencv2.sh" | bash
   - git clone https://github.com/grassjelly/testr
   - cd testr
   - mkdir build && cd build
