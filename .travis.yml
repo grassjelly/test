@@ -41,7 +41,7 @@ install:
   - conda activate traffic-experiments
   - mkdir build && cd build
   - cmake ..
-  - make
+  - make -j5
 
 notifications:
   email:
