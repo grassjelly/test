@@ -3,25 +3,15 @@ language: generic
 
 matrix:
   include:
-   - dist: xenial
-     env: ROSDISTRO=kinetic
-     os: linux
-     arch: amd64
+   - python: 3.6
 
    - dist: xenial
-     env: ROSDISTRO=kinetic
-     os: linux
-     arch: arm64
-
-   - dist: bionic
-     env: ROSDISTRO=melodic
      os: linux
      arch: amd64
 
    - dist: bionic
-     env: ROSDISTRO=melodic
      os: linux
-     arch: arm64
+     arch: amd64
 
 branches:
   only:
@@ -30,16 +20,22 @@ branches:
 compiler:
   - gcc
 
+before_install:
+  # Install the latest version of Miniconda
+  - wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O miniconda.sh
+  - chmod +x miniconda.sh
+  - ./miniconda.sh -b
+  - export PATH=/home/travis/miniconda/bin:$PATH
+  - conda update --yes conda  # Update CONDA without command line prompt
+  - conda install mamba
+
 install:
-  - sudo apt update
-  - sudo apt install -y qt5-default
-  - sudo apt install -y libqt5widgets5  
-  - sudo apt install -y qtbase5-dev
-  - sudo apt install -y libqt5concurrent5
-  - sudo apt install -y libyaml-cpp-dev
+
   # - curl -s "https://raw.githubusercontent.com/arthurbeggs/scripts/master/install_apps/install_opencv2.sh" | bash
   - git clone https://github.com/grassjelly/testr
   - cd testr
+  - mamba env create -f environment.yaml
+  - conda activate traffic-experiments
   - mkdir build && cd build
   - cmake ..
   - make

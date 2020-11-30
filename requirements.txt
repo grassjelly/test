@@ -1,0 +1,19 @@
+name: traffic-experiments
+channels:
+  - conda-forge
+  - cogsci
+dependencies:
+  - jupyterlab
+  - eigen
+  - boost
+  - yaml-cpp
+  - xeus-cling=>0.10.0
+  - python=3.6
+  - pip
+  - pyyaml
+  - paho-mqtt
+  - matplotlib
+  - networkx
+  - scipy
+  - pip:
+    - -r file:requirements.txt
