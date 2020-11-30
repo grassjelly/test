@@ -1,9 +1,9 @@
 name: traffic-experiments
 channels:
   - conda-forge
-  - cogsci
 dependencies:
-  - mesa
+  - xorg-libxext
+  - libglvnd-glx-cos7-x86_64
   - qt
   - cmake
   - eigen
