@@ -3,6 +3,7 @@ channels:
   - conda-forge
   - cogsci
 dependencies:
+  - mesa
   - qt
   - cmake
   - eigen
